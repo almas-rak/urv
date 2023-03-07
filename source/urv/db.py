@@ -24,3 +24,9 @@ class DataBase:
             if record[10] not in self.employees:
                 self.employees.append(record[10])
         return self.employees
+
+
+
+
+
+

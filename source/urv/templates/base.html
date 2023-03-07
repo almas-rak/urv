@@ -1,13 +1,42 @@
-
+{% load static %}
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dark_mode.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav_sidebar.css' %}">
+    <script src="{% static 'js/nav_sidebar.js'%}" defer></script>
+    <script src="{% static 'js/vendor/jquery/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery.init.js' %}"></script>
+    <script src="{% static 'js/core.js' %}"></script>
+    <script src="{% static 'js/prepopulate.js' %}"></script>
+    <script src="{% static 'js/vendor/xregexp/xregexp.js' %}"></script>
+    <script src="{% static 'js/filters.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     
+</head>
+<bodyclass=" app-urv model-employee">
+    <div id="header">
+        <div id="branding">
+            <h1 id="site-name"><a href="/admin/">URV</a></h1>
+        </div>
+        <div id="user-tools">           
+            Добро пожаловать
+        </div>
+    </div>
+    <div class="breadcrumbs">
+    </div>
+    <div id="container">
+        <div class="main" id="main">
+            {% block content %}{% endblock content %}
+        </div>
+    </div>
+
 </body>
 </html>

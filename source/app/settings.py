@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&&6rkhjd$t3&d^7wam6^356(qr+lgi2r&+6ixs&u($&h&4tvdv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,7 +82,18 @@ DATABASES = {
         'PASSWORD': 'hDWFNt2c',
         'HOST': 'localhost',
         'PORT': '40005',
-    }}
+    },
+    
+    'pku':{
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'urv_1',
+        'USER': 'postgres',
+        'PASSWORD': 'hDWFNt2c',
+        'HOST': 'localhost',
+        'PORT': '40005',
+    }
+
+    }
 
 
 # Password validation
@@ -120,6 +131,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

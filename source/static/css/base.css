@@ -249,6 +249,7 @@ div.help ul {
 
 p img, h1 img, h2 img, h3 img, h4 img, td img {
     vertical-align: middle;
+    
 }
 
 .quiet, a.quiet:link, a.quiet:visited {
@@ -281,6 +282,7 @@ td, th {
     border-bottom: 1px solid var(--hairline-color);
     vertical-align: top;
     padding: 8px;
+    text-align: center;
 }
 
 th {
